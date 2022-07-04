@@ -1,0 +1,31 @@
+<p>Hola soy un ejemplo de component....!!!!!</p>
+Id producto buscar <input type="number" name="campoId" [(ngModel)]="idProductoBuscar">
+<button (click)="eventoClickBuscarProducto()">Buscar producto</button>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>{{producto.id}}</td>
+    </tr>
+    <tr>
+        <td>Nombre</td>
+        <td>{{producto.nombre}}</td>
+    </tr>
+    <tr>
+        <td>Precio</td>
+        <td>{{producto.precio}}</td>
+    </tr>
+</table>
+<br>
+<button (click)="eventoClickAgregarProducto()">Agregar producto</button>
+<table>
+    <tr>
+        <th>Id</th>    
+        <th>Nombre</th>    
+        <th>Precio</th>    
+    </tr>
+    <tr *ngFor="let p of productos">
+        <td>{{p.id}}</td>
+        <td>{{p.nombre}}</td>
+        <td>{{p.precio}}</td>
+    </tr>
+</table>
